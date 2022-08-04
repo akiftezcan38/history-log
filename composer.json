@@ -19,5 +19,10 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "akiftezcan38\\history-log\\": "src"
+        }
     }
 }
