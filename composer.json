@@ -15,7 +15,7 @@
             "email": "akif.tezcan@aurorabilisim.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^7.4"
