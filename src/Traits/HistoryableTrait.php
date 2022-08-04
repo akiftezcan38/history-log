@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Traits;
+namespace Aurora\HistoryLog\Traits;
 
-use App\Events\HistoryEventObserver;
+use Aurora\HistoryLog\Events\HistoryEventObserver;
 
 trait HistoryableTrait
 {

@@ -22,7 +22,14 @@
     },
     "autoload": {
         "psr-4": {
-            "akiftezcan38\\history-log\\": "src"
+            "Aurora\\HistoryLog\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aurora\\HistoryLog\\HistoryLogServiceProvider"
+            ]
         }
     }
 }

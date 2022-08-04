@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Events;
+namespace Aurora\HistoryLog\Events;
 
-use App\Exceptions\HistoryException;
-use App\Models\History;
+use Aurora\HistoryLog\Exceptions\HistoryException;
+use Aurora\HistoryLog\Models\History;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;

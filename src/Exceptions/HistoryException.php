@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace Aurora\HistoryLog\Exceptions;
 
 class HistoryException extends \Exception
 {
