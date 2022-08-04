@@ -1,0 +1,23 @@
+{
+    "name": "akiftezcan38/history-log",
+    "description": "That allows you to keep a revision history for your models without thinking.",
+    "license": "MIT",
+    "keywords": [
+        "Aurora",
+        "laravel",
+        "history-log",
+        "history",
+        "log"
+    ],
+    "authors": [
+        {
+            "name": "Mehmet Akif TEZCAN",
+            "email": "akif.tezcan@aurorabilisim.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4"
+    }
+}
