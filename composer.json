@@ -31,5 +31,9 @@
                 "Aurora\\HistoryLog\\HistoryLogServiceProvider"
             ]
         }
+    },
+    "config": {
+        "platform-check": false
     }
+
 }
