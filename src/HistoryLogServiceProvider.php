@@ -2,7 +2,7 @@
 
 namespace Aurora\HistoryLog;
 
-use Illuminate\Support\Facades\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 
 class HistoryLogServiceProvider extends ServiceProvider
