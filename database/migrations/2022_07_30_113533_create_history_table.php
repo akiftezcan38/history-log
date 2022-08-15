@@ -19,9 +19,9 @@ class CreateHistoryTable extends Migration
             $table->string('table')->nullable(false)->index();
             $table->string('model')->nullable(false)->index();
             $table->integer('model_id')->nullable(false);
-            $table->string('column')->nullable(true);
-            $table->text('old_value')->nullable();
-            $table->text('new_value')->nullable();
+            $table->longtext('column')->nullable(true);
+            $table->longtext('old_value')->nullable();
+            $table->longtext('new_value')->nullable();
             $table->integer('user_id')->nullable(true)->index();
             $table->string('ip_address')->nullable(false);
             $table->timestamps();
