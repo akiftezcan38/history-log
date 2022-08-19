@@ -11,21 +11,18 @@ php artisan migrate
 History Log'un kullanımı basittir. Geçmişini izlemek istediğiniz model classlarınızın içine **HistoryableTrait** çağırdığınızda artık modeliniz için History Log geçmiş tutmaya başlayacak.
 ```php
     use HistoryableTrait;
-
 ```
 
 - Eğer bazı sütunları bundan hariç tutmak istiyorsanız model classınızın içerisine global olarak bu değişkeni ekleyin ve array olarak sütun isimlerini yazın.
 
 ```php
     protected $excludedColumns = ['deleted_at', 'id'];
-
 ```
 
 - Eğer bazı model eventlerinde geçmiş tutmak istemiyorsanız aşağıdaki değişkeni ekleyin. Şuan bu versyionda sadece create , update ve delete eventlerinin geçmişini tutuyor. İlerleyen zamanlarda save event da eklenecektir.
 
 ```php
     protected $excludedEvents = ['delete', 'create'];
-
 ```
 
 
