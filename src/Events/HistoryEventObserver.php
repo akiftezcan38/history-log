@@ -89,7 +89,7 @@ class HistoryEventObserver
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();
-            throw new HistoryException($exception);
+//            throw new HistoryException($exception);
         }
     }
 }
