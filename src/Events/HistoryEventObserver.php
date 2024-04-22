@@ -72,21 +72,23 @@ class HistoryEventObserver
                     $columns[] = [$column];
                 }
             }
-            DB::beginTransaction();
-            $revision = array(
-                'table' => $model->getTable(),
-                'model' => $model->getMorphClass(),
-                'model_id' => $model->getKey(),
-                'column' => ($event != 'deleted') ? json_encode($columns, JSON_UNESCAPED_UNICODE) : null,
-                'action' => $event,
-                'old_value' => ($event == 'updated') ? json_encode($oldValues, JSON_UNESCAPED_UNICODE) : null,
-                'new_value' => ($event != 'deleted') ? json_encode($newValues, JSON_UNESCAPED_UNICODE) : null,
-                'user_id' => Auth::check() ? Auth::user()->id : null,
-                'ip_address' => Request::ip(),
-            );
+            if ($columns != null || $columns != []){
+                DB::beginTransaction();
+                $revision = array(
+                    'table' => $model->getTable(),
+                    'model' => $model->getMorphClass(),
+                    'model_id' => $model->getKey(),
+                    'column' => ($event != 'deleted') ? json_encode($columns, JSON_UNESCAPED_UNICODE) : null,
+                    'action' => $event,
+                    'old_value' => ($event == 'updated') ? json_encode($oldValues, JSON_UNESCAPED_UNICODE) : null,
+                    'new_value' => ($event != 'deleted') ? json_encode($newValues, JSON_UNESCAPED_UNICODE) : null,
+                    'user_id' => Auth::check() ? Auth::user()->id : null,
+                    'ip_address' => Request::ip(),
+                );
 
-            History::create($revision);
-            DB::commit();
+                History::create($revision);
+                DB::commit();
+            }
         } catch (\Exception $exception) {
             DB::rollBack();
 //            throw new HistoryException($exception);
