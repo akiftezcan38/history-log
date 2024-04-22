@@ -72,7 +72,7 @@ class HistoryEventObserver
                     $columns[] = [$column];
                 }
             }
-            if ($columns != null || $columns != []){
+            if ($columns != null && $columns != []){
                 DB::beginTransaction();
                 $revision = array(
                     'table' => $model->getTable(),
