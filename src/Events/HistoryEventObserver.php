@@ -72,7 +72,7 @@ class HistoryEventObserver
                     $columns[] = [$column];
                 }
             }
-            if ($columns == [] || $columns == null) {
+            if ((($columns == [] || $columns == null) && $event != 'deleted')) {
             }else{
                 DB::beginTransaction();
                 $revision = array(
